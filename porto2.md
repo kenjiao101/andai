@@ -313,7 +313,7 @@ df_raw = ds['train'].to_pandas()
 ## 📄 License
 
 Distributed under the **MIT License**.
-See [LICENSE](https://github.com/kenzyfarzq/workforce-scheduling-optimization/blob/main/LICENSE) for full details.
+See [LICENSE](LICENSE) for full details.
 
 ---
 
