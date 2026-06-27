@@ -13,6 +13,20 @@
 
 </div>
 
+## 📝 Table of Contents
+
+1. [Overview](#-overview)
+2. [Problem Statement](#-problem-statement)
+3. [Dataset](#-dataset)
+4. [Tech Stack](#-tech-stack)
+5. [Project Structure](#-project-structure)
+6. [Getting Started](#-getting-started)
+7. [Usage](#-usage)
+8. [Screenshots](#-screenshots)
+9. [Results and Performance](#-results-and-performance)
+10. [Limitations](#-limitations)
+11. [License](#-license)
+12. [Contact](#-contact)
 ---
 
 ## 📌 Overview
@@ -258,7 +272,7 @@ Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality.
 
 ---
 
-## 📈 Results & Performance
+## 📈 Results and Performance
 
 ### Key Findings
 
