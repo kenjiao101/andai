@@ -64,56 +64,6 @@ This project is a reproducible market intelligence study that analyzes the tempo
 | Visualization | Matplotlib + Seaborn | 15 analytical figures |
 | Version Control | Git + GitHub | Repository management |
 
-<details>
-<summary>📐 Analytical Pipeline</summary>
-<br>
-
-```
-┌─────────────────────────────────────────────────────────┐
-│  Hugging Face Hub — lukebarousse/data_jobs              │
-│  785,741 rows × 17 columns (loaded via datasets API)    │
-└──────────────────────────┬──────────────────────────────┘
-                           │
-                           ▼
-┌─────────────────────────────────────────────────────────┐
-│  Quality Assessment + Preprocessing Pipeline            │
-│  · Temporal coverage validation (gate: >= 3,000/month)  │
-│  · Datetime parsing + filter (2023-01-01 to 2023-12-31) │
-│  · Deduplication (0.21% removed)                        │
-│  · safe_parse_skills() — graceful fallback on errors    │
-│  · Feature engineering: seniority, is_remote, skill_cnt │
-│  → df: 784,140 rows  |  df_skills_long: 3,653,153 rows  │
-│  → 252 unique skills  |  12 valid months                │
-└────────────────────────┬────────────────────────────────┘
-                         │
-          ┌──────────────┼────────────────┐
-          ▼              ▼                ▼
-   ┌────────────┐  ┌───────────┐  ┌─────────────┐
-   │  Layer 1   │  │  Layer 2  │  │   Layer 3   │
-   │    TFA     │  │   PMI     │  │   TF-IDF    │
-   │ Temporal   │  │ Network   │  │   Role      │
-   │ Frequency  │  │ Analysis  │  │  Profiling  │
-   │ Analysis   │  │ (NetworkX)│  │             │
-   └─────┬──────┘  └─────┬─────┘  └──────┬──────┘
-         │               │                │
-         │  · Monthly    │  · 75 nodes    │  · TF matrix
-         │    prop matrix│    1,125 edges │    (40×10)
-         │  · Chi-Square │  · 3 Louvain  │  · IDF adapted
-         │    H1 vs H2   │    clusters   │  · Cosine sim
-         │  · Bubble     │  · Betweenness│    overlap
-         │    chart      │    centrality │    matrix
-         └───────────────┴────────────────┘
-                         │
-                         ▼
-           ┌─────────────────────────────┐
-           │   Synthesis — Section 11    │
-           │   Auto-generated findings   │
-           │   15 PNG visualizations     │
-           └─────────────────────────────┘
-```
-
-</details>
-
 ---
 
 ## 📁 Project Structure
@@ -122,7 +72,7 @@ This project is a reproducible market intelligence study that analyzes the tempo
 talent-market-skill-drift-2023/
 │
 ├── notebooks/
-│   └── talent_market_skill_drift_study_us_2023.ipynb   ← START HERE
+│   └── talent_market_skill_drift_study_.ipynb   ← START HERE
 │       (13 sections, fully self-contained and reproducible end-to-end)
 │
 ├── outputs/
@@ -149,7 +99,7 @@ talent-market-skill-drift-2023/
 └── README.md
 ```
 
-> **Entry point:** Open `notebooks/talent_market_skill_drift_study_us_2023.ipynb` and run all cells sequentially. No pre-downloaded data or external files are required. The dataset is fetched automatically from Hugging Face.
+> **Entry point:** Open `notebooks/talent_market_skill_drift_study.ipynb` and run all cells sequentially. No pre-downloaded data or external files are required. The dataset is fetched automatically from Hugging Face.
 
 ---
 
@@ -166,19 +116,24 @@ talent-market-skill-drift-2023/
 
 ### Installation
 
+1. Clone the repository
 ```bash
-# 1. Clone the repository
-git clone https://github.com/[your-username]/talent-market-skill-drift-2023.git
-cd talent-market-skill-drift-2023
+git clone https://github.com/kenzyfarzq/talent-market-skill-drift.git
+cd talent-market-skill-drift
+```
 
-# 2. Create and activate a virtual environment
+2. Create and activate a virtual environment
+```bash
 python -m venv venv
 
 source venv/bin/activate          # macOS / Linux
 # venv\Scripts\activate           # Windows (CMD)
 # venv\Scripts\Activate.ps1       # Windows (PowerShell)
+```
 
-# 3. Install all dependencies
+3. Install all dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -360,26 +315,28 @@ df_raw = ds['train'].to_pandas()
 ## 📄 License
 
 Distributed under the **MIT License**.
-See [LICENSE](LICENSE) for full details.
+See [LICENSE](https://github.com/kenzyfarzq/workforce-scheduling-optimization/blob/main/LICENSE) for full details.
 
 ---
 
 ## 📬 Contact
 
-**[Your Name]**
+**Ahmad Kenzy Farzaq**
 
-[![GitHub](https://img.shields.io/badge/GitHub-@[your--username]-181717?style=flat-square&logo=github)](https://github.com/[your-username])
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-[your--name]-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/[your-username])
-[![Email](https://img.shields.io/badge/Email-[your--email]-D14836?style=flat-square&logo=gmail)](mailto:[your-email])
+[![GitHub](https://img.shields.io/badge/GitHub-kenzyfarzq-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/kenzyfarzq)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-kenzyfarzq-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/kenzyfarzq-60b790320/)
+[![Email](https://img.shields.io/badge/Email-kenzyfarzq@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:kenzyfarzq@gmail.com)
 
 <br>
 
-> 💬 Found an issue or have a suggestion? [Open a new issue](https://github.com/[your-username]/talent-market-skill-drift-2023/issues/new).
+> 💬 Found a bug or have a suggestion? [Open a new issue](https://github.com/kenzyfarzq/workforce-scheduling-optimization/issues/new).
 
 ---
 
 <div align="center">
   <sub>
-    Made with ❤️ by <a href="https://github.com/[your-username]">[Your Name]</a> · Last updated: 2025-01
+    ⭐ If you find this project useful, consider giving it a star!
+    <br>
+    Made by <a href="https://github.com/kenzyfarzq">kenzyfarzq</a> · 2026-06
   </sub>
 </div>
