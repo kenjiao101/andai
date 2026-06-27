@@ -90,6 +90,10 @@ df_raw = ds['train'].to_pandas()
 
 ## 📁 Project Structure
 
+<details>
+<summary> </summary>
+<br>
+
 ```
 talent-market-skill-drift-2023/
 │
@@ -120,6 +124,8 @@ talent-market-skill-drift-2023/
 ├── LICENSE
 └── README.md
 ```
+
+</details>
 
 > **Entry point:** Open `notebooks/talent_market_skill_drift_study.ipynb` and run all cells sequentially. No pre-downloaded data or external files are required. The dataset is fetched automatically from Hugging Face.
 
@@ -291,7 +297,7 @@ Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality.
        src="https://github.com/user-attachments/assets/62d2332d-fb5e-4aee-9bef-62956ecdff35" />
 </p>
 
-Monthly proportion (%) of the top 10 skills. Y-axis is normalized proportion, not raw count — controls for seasonal posting volume fluctuations.
+Monthly proportion (%) of the top 10 skills. Y-axis uses normalized proportions instead of raw counts to control for seasonal fluctuations in posting volume.
 
 ### Role Distribution Over Time
 
