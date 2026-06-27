@@ -321,7 +321,7 @@ See [LICENSE](LICENSE) for full details.
 
 **Ahmad Kenzy Farzaq**
 
-[![GitHub](https://img.shields.io/badge/GitHub-kenzyfarzq-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/kenzyfarzq)
+[![GitHub](https://img.shields.io/badge/GitHub-kenzyfarzq-181717?style=flat-square&logo=github&logoColor=white)]()
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-kenzyfarzq-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/kenzyfarzq-60b790320/)
 [![Email](https://img.shields.io/badge/Email-kenzyfarzq@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:kenzyfarzq@gmail.com)
 
