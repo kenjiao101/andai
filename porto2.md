@@ -199,7 +199,7 @@ export HF_TOKEN=your_token_here   # macOS / Linux
 jupyter notebook
 
 # Open the notebook:
-# notebooks/talent_market_skill_drift_study_us_2023.ipynb
+# notebooks/talent_market_skill_drift_study.ipynb
 ```
 
 Run all cells sequentially from top to bottom. The notebook is divided into 13 self-contained sections:
