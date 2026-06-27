@@ -94,7 +94,7 @@ df_raw = ds['train'].to_pandas()
 | Language | Python 3.10+ | Core analytical pipeline |
 | Environment | Jupyter Notebook | Interactive development and reproducible output |
 | Data Acquisition | Hugging Face `datasets` | Remote loading of `lukebarousse/data_jobs` |
-| Data Processing | pandas 2.2.2, NumPy 2.0.2 | DataFrame operations, normalization, matrix construction |
+| Data Processing | Pandas, NumPy | DataFrame operations, normalization, matrix construction |
 | Statistical Testing | SciPy (`chi2_contingency`) | Significance testing for skill emergence/decline |
 | Network Analysis | NetworkX + python-louvain | Graph construction, PMI weighting, Louvain community detection, centrality metrics |
 | Visualization | Matplotlib + Seaborn | 15 analytical figures |
