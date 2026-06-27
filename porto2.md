@@ -7,11 +7,9 @@
 <br>
 
 [![License](https://img.shields.io/badge/license-MIT-3DA639?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/status-completed-blue?style=flat-square)]()
 [![Python](https://img.shields.io/badge/python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![Jupyter](https://img.shields.io/badge/jupyter-notebook-F37626?style=flat-square&logo=jupyter&logoColor=white)](notebooks/)
 [![Dataset](https://img.shields.io/badge/dataset-Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/datasets/lukebarousse/data_jobs)
-[![Last Commit](https://img.shields.io/github/last-commit/[your-username]/talent-market-skill-drift-2023?style=flat-square)](https://github.com/[your-username]/talent-market-skill-drift-2023/commits)
 
 </div>
 
