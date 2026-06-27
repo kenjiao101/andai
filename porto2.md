@@ -225,12 +225,12 @@ DATE_END           = '2023-12-31'
 
 | Skill Opportunity Matrix | Skill Emergence vs Decline |
 |:---:|:---:|
-| ![Skill Opportunity Matrix](outputs/figures/plot_skill_opportunity_matrix.png) | ![Skill Emergence vs Decline](outputs/figures/plot_skill_diverging.png) |
+| <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/1fb1ae55-5d14-40f7-95d3-89d24a7e155e" /> | <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/593a71e2-6935-4edf-b27f-e6c3928295cc" /> |
 | *Growth momentum (x-axis) vs. overall market demand (y-axis) across all statistically significant skills. Four quadrants: Core & Growing, Emerging, Established Decline, Niche & Fading.* | *Top 20 emerging and top 20 declining skills by H1 vs. H2 growth rate (%, p < 0.05). Only skills with total frequency >= 500 are included.* |
 
 | Co-occurrence Network | Role-Skill Distinctiveness Heatmap |
 |:---:|:---:|
-| ![Skill Co-occurrence Network](outputs/figures/plot_skill_network.png) | ![Role Skill Heatmap](outputs/figures/plot_skill_role_heatmap.png) |
+| <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/3adbf5ca-9b5b-44c3-81e1-3def97fb7add" /> | <img width="400" height="700" alt="image" src="https://github.com/user-attachments/assets/98884aad-76ad-4518-ba0f-f14b7d2e0abb" /> |
 | *Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality. Color = Louvain community (3 clusters). Layout: Kamada-Kawai.* | *TF-IDF adapted distinctiveness across 40 skills and 10 roles. Darker cells indicate higher distinctiveness score for that role. SQL and Python appear lightest — they are universal, not differentiators.* |
 
 ---
@@ -248,10 +248,6 @@ DATE_END           = '2023-12-31'
 4. **The data skill ecosystem splits into 3 distinct communities.** Louvain community detection on a 75-node PMI network (`>= 0.3`) identified: (1) a DevOps/Engineering cluster (PostgreSQL, Git, Kubernetes, Docker), (2) an ML/Python stack cluster (PyTorch, C++, Pandas, scikit-learn), and (3) an Analytics/BI tools cluster (VBA, Oracle, SPSS, Tableau).
 
 5. **Bridge skills carry disproportionate strategic value.** GitLab and Jupyter show high betweenness centrality while maintaining mid-level degree centrality, meaning they connect multiple technology communities without being universal. These are the highest-value skills for cross-ecosystem career mobility.
-
-6. **Most roles share fundamentally similar skill profiles.** The average cosine similarity across all role pairs is high. Data Scientist and Senior Data Scientist share a near-identical skill profile (similarity = `1.00`), while Business Analyst and Machine Learning Engineer represent the most differentiated pair (similarity = `0.44`). Career transitions between similar-profile roles require less re-learning effort.
-
-7. **The market was unusually volatile in 2023.** With `95` out of `162` qualified skills declining significantly and only `17` rising, the 2023 data job market showed more disruption than stability, consistent with broad industry adjustment post-AI tooling inflection.
 
 ### Summary Table
 
@@ -275,7 +271,7 @@ DATE_END           = '2023-12-31'
 
 | Skill Trend Lines | Role Distribution Over Time |
 |:---:|:---:|
-| ![Skill Trend Lines](outputs/figures/plot_skill_trend_line.png) | ![Role Over Time](outputs/figures/plot_role_over_time.png) |
+| <img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/62d2332d-fb5e-4aee-9bef-62956ecdff35" /> | <img width="1190" height="390" alt="image" src="https://github.com/user-attachments/assets/5a801d7a-34ae-46a3-b2d6-76f7995b546f" /> |
 | *Monthly proportion (%) of the top 10 skills. Y-axis is normalized proportion, not raw count — controls for seasonal posting volume fluctuations.* | *Stacked area chart showing the share of each role in total postings per month. Stable proportions suggest relatively constant hiring mix throughout 2023.* |
 
 ---
