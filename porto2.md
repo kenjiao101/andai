@@ -187,7 +187,7 @@ Run all cells sequentially from top to bottom. The notebook is divided into 13 s
 | Section | Title | Description |
 |:---:|---|---|
 | 1 | Import Library | All dependencies with graceful fallback for optional packages |
-| 2 | Reproducibility Config | Centralized parameters — edit here to adjust analysis scope |
+| 2 | Reproducibility Config | Centralized parameters (edit here to adjust analysis scope) |
 | 3 | Data Acquisition | Load dataset, temporal coverage validation gate |
 | 4 | Data Quality Assessment | Missing value profile, duplicate check, skill parsing test |
 | 5 | Preprocessing Pipeline | Filter, dedup, parse skills, feature engineering |
@@ -239,19 +239,19 @@ DATE_END           = '2023-12-31'
 
 ### Key Findings
 
-1. **SQL and Python are now prerequisites, not differentiators.** SQL appeared in `49.0%` (`384,084` mentions) and Python in `48.5%` (`380,158` mentions) of all postings — present in nearly half of the entire market. TF-IDF analysis confirms both have low distinctiveness across roles precisely because of this ubiquity.
+1. **SQL and Python are now prerequisites, not differentiators.** SQL appeared in `49.0%` (`384,084` mentions) and Python in `48.5%` (`380,158` mentions) of all postings, making both skills present in nearly half of the entire market. TF-IDF analysis confirms both have low distinctiveness across roles precisely because of this ubiquity.
 
 2. **Hugging Face showed the highest statistically significant growth in H2 2023 (+78.2%, p < 0.0001)**, followed by Ubuntu (+43.9%), Unity (+21.1%), and Microsoft Teams (+20.5%). This pattern reflects expanding LLM adoption and broader AI tooling integration into data workflows during 2023.
 
-3. **Platforms and legacy tools declined sharply.** DataRobot (-44.5%), Watson (-34.0%), Vue (-29.4%), and Theano (-26.3%) all showed statistically significant drops in H2 — indicating market displacement rather than seasonal fluctuation. Of `162` qualified skills tested, `95` declined significantly versus only `17` that rose.
+3. **Platforms and legacy tools declined sharply.** DataRobot (-44.5%), Watson (-34.0%), Vue (-29.4%), and Theano (-26.3%) all showed statistically significant drops in H2, indicating structural market displacement rather than seasonal fluctuation. Of `162` qualified skills tested, `95` declined significantly versus only `17` that rose.
 
 4. **The data skill ecosystem splits into 3 distinct communities.** Louvain community detection on a 75-node PMI network (`>= 0.3`) identified: (1) a DevOps/Engineering cluster (PostgreSQL, Git, Kubernetes, Docker), (2) an ML/Python stack cluster (PyTorch, C++, Pandas, scikit-learn), and (3) an Analytics/BI tools cluster (VBA, Oracle, SPSS, Tableau).
 
-5. **Bridge skills carry disproportionate strategic value.** GitLab and Jupyter show high betweenness centrality while maintaining mid-level degree centrality — meaning they connect multiple technology communities without being universal. These are the highest-value skills for cross-ecosystem career mobility.
+5. **Bridge skills carry disproportionate strategic value.** GitLab and Jupyter show high betweenness centrality while maintaining mid-level degree centrality, meaning they connect multiple technology communities without being universal. These are the highest-value skills for cross-ecosystem career mobility.
 
 6. **Most roles share fundamentally similar skill profiles.** The average cosine similarity across all role pairs is high. Data Scientist and Senior Data Scientist share a near-identical skill profile (similarity = `1.00`), while Business Analyst and Machine Learning Engineer represent the most differentiated pair (similarity = `0.44`). Career transitions between similar-profile roles require less re-learning effort.
 
-7. **The market was unusually volatile in 2023.** With `95` out of `162` qualified skills declining significantly and only `17` rising, the 2023 data job market showed more disruption than stability — consistent with broad industry adjustment post-AI tooling inflection.
+7. **The market was unusually volatile in 2023.** With `95` out of `162` qualified skills declining significantly and only `17` rising, the 2023 data job market showed more disruption than stability, consistent with broad industry adjustment post-AI tooling inflection.
 
 ### Summary Table
 
@@ -277,8 +277,6 @@ DATE_END           = '2023-12-31'
 |:---:|:---:|
 | ![Skill Trend Lines](outputs/figures/plot_skill_trend_line.png) | ![Role Over Time](outputs/figures/plot_role_over_time.png) |
 | *Monthly proportion (%) of the top 10 skills. Y-axis is normalized proportion, not raw count — controls for seasonal posting volume fluctuations.* | *Stacked area chart showing the share of each role in total postings per month. Stable proportions suggest relatively constant hiring mix throughout 2023.* |
-
-> 📂 All figures are stored in `outputs/figures/`. Each plot filename corresponds to the section that generated it (e.g., `plot_skill_diverging.png` is from Section 8).
 
 ---
 
