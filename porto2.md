@@ -31,21 +31,45 @@ This project is a reproducible market intelligence study that analyzes the tempo
 
 ---
 
-## 🎥 Demo & Screenshots
+## 📊 Dataset
 
-> 📓 **Notebook:** [[nbviewer](https://nbviewer.org/github/[your-username]/talent-market-skill-drift-2023/blob/main/notebooks/talent_market_skill_drift_study_us_2023.ipynb)] &nbsp;|&nbsp; [![Open in Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=flat-square&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/[your-username]/talent-market-skill-drift-2023/blob/main/notebooks/talent_market_skill_drift_study_us_2023.ipynb)
+### Metadata
 
-<br>
+| Attribute | Detail |
+|---|---|
+| **Source** | Hugging Face Hub |
+| **Identifier** | [`lukebarousse/data_jobs`](https://huggingface.co/datasets/lukebarousse/data_jobs) |
+| **Raw Size** | `785,741` rows × `17` columns |
+| **After Preprocessing** | `784,140` rows (deduplication: 0.21% removed) |
+| **Format** | Parquet (loaded via HF `datasets` API) |
+| **Geographic Scope** | Global; US-dominant (`26.3%` of postings from United States) |
+| **Temporal Coverage** | 2023-01-01 to 2023-12-31 — all 12 months valid (`>= 3,000` postings each) |
 
-| Skill Opportunity Matrix | Skill Emergence vs Decline |
-|:---:|:---:|
-| ![Skill Opportunity Matrix](outputs/figures/plot_skill_opportunity_matrix.png) | ![Skill Emergence vs Decline](outputs/figures/plot_skill_diverging.png) |
-| *Growth momentum (x-axis) vs. overall market demand (y-axis) across all statistically significant skills. Four quadrants: Core & Growing, Emerging, Established Decline, Niche & Fading.* | *Top 20 emerging and top 20 declining skills by H1 vs. H2 growth rate (%, p < 0.05). Only skills with total frequency >= 500 are included.* |
+### Data Dictionary (Key Columns)
 
-| Co-occurrence Network | Role-Skill Distinctiveness Heatmap |
-|:---:|:---:|
-| ![Skill Co-occurrence Network](outputs/figures/plot_skill_network.png) | ![Role Skill Heatmap](outputs/figures/plot_skill_role_heatmap.png) |
-| *Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality. Color = Louvain community (3 clusters). Layout: Kamada-Kawai.* | *TF-IDF adapted distinctiveness across 40 skills and 10 roles. Darker cells indicate higher distinctiveness score for that role. SQL and Python appear lightest — they are universal, not differentiators.* |
+| Column | Type | Description | Example |
+|---|:---:|---|---|
+| `job_title_short` | `str` | Standardized role category (10 unique values) | `"Data Analyst"` |
+| `job_posted_date` | `datetime` | Posting timestamp | `"2023-01-15 10:23:04"` |
+| `job_skills` | `str` | Stringified list of required skills (raw) | `"['python', 'sql', 'aws']"` |
+| `job_type_skills` | `str` | Stringified dict of skills by category | `"{'cloud': ['aws', 'azure'], ...}"` |
+| `job_country` | `str` | Posting country | `"United States"` |
+| `job_work_from_home` | `bool` | Remote work indicator | `True` |
+| `salary_year_avg` | `float` | Annual salary in USD (97.2% missing) | `95000.0` |
+
+> **Note on `salary_year_avg`:** `97.2%` of values are missing. Companies typically do not disclose salary ranges publicly in job postings. Salary-related analysis in this study is supplementary and does not represent full market compensation data.
+
+### Reproducing the Data Load
+
+```python
+from datasets import load_dataset
+
+ds = load_dataset("lukebarousse/data_jobs")
+df_raw = ds['train'].to_pandas()
+
+# Shape: (785741, 17)
+# All subsequent preprocessing steps are handled in the notebook (Section 5)
+```
 
 ---
 
@@ -195,53 +219,19 @@ DATE_START         = '2023-01-01'
 DATE_END           = '2023-12-31'
 ```
 
-### Output Location
-
-By default, the notebook saves all figures to the **current working directory**. To commit figures to `outputs/figures/` as structured in this repo, either:
-- Run the notebook from the `notebooks/` directory and move the PNGs to `outputs/figures/`, or
-- Modify `plt.savefig()` calls in the notebook to use `'../outputs/figures/plot_name.png'` as the path.
-
 ---
 
-## 📊 Dataset
+## 🎥 Screenshots
 
-### Metadata
+| Skill Opportunity Matrix | Skill Emergence vs Decline |
+|:---:|:---:|
+| ![Skill Opportunity Matrix](outputs/figures/plot_skill_opportunity_matrix.png) | ![Skill Emergence vs Decline](outputs/figures/plot_skill_diverging.png) |
+| *Growth momentum (x-axis) vs. overall market demand (y-axis) across all statistically significant skills. Four quadrants: Core & Growing, Emerging, Established Decline, Niche & Fading.* | *Top 20 emerging and top 20 declining skills by H1 vs. H2 growth rate (%, p < 0.05). Only skills with total frequency >= 500 are included.* |
 
-| Attribute | Detail |
-|---|---|
-| **Source** | Hugging Face Hub |
-| **Identifier** | [`lukebarousse/data_jobs`](https://huggingface.co/datasets/lukebarousse/data_jobs) |
-| **Raw Size** | `785,741` rows × `17` columns |
-| **After Preprocessing** | `784,140` rows (deduplication: 0.21% removed) |
-| **Format** | Parquet (loaded via HF `datasets` API) |
-| **Geographic Scope** | Global; US-dominant (`26.3%` of postings from United States) |
-| **Temporal Coverage** | 2023-01-01 to 2023-12-31 — all 12 months valid (`>= 3,000` postings each) |
-
-### Data Dictionary (Key Columns)
-
-| Column | Type | Description | Example |
-|---|:---:|---|---|
-| `job_title_short` | `str` | Standardized role category (10 unique values) | `"Data Analyst"` |
-| `job_posted_date` | `datetime` | Posting timestamp | `"2023-01-15 10:23:04"` |
-| `job_skills` | `str` | Stringified list of required skills (raw) | `"['python', 'sql', 'aws']"` |
-| `job_type_skills` | `str` | Stringified dict of skills by category | `"{'cloud': ['aws', 'azure'], ...}"` |
-| `job_country` | `str` | Posting country | `"United States"` |
-| `job_work_from_home` | `bool` | Remote work indicator | `True` |
-| `salary_year_avg` | `float` | Annual salary in USD (97.2% missing) | `95000.0` |
-
-> **Note on `salary_year_avg`:** `97.2%` of values are missing. Companies typically do not disclose salary ranges publicly in job postings. Salary-related analysis in this study is supplementary and does not represent full market compensation data.
-
-### Reproducing the Data Load
-
-```python
-from datasets import load_dataset
-
-ds = load_dataset("lukebarousse/data_jobs")
-df_raw = ds['train'].to_pandas()
-
-# Shape: (785741, 17)
-# All subsequent preprocessing steps are handled in the notebook (Section 5)
-```
+| Co-occurrence Network | Role-Skill Distinctiveness Heatmap |
+|:---:|:---:|
+| ![Skill Co-occurrence Network](outputs/figures/plot_skill_network.png) | ![Role Skill Heatmap](outputs/figures/plot_skill_role_heatmap.png) |
+| *Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality. Color = Louvain community (3 clusters). Layout: Kamada-Kawai.* | *TF-IDF adapted distinctiveness across 40 skills and 10 roles. Darker cells indicate higher distinctiveness score for that role. SQL and Python appear lightest — they are universal, not differentiators.* |
 
 ---
 
