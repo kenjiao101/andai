@@ -105,7 +105,7 @@ df_raw = ds['train'].to_pandas()
 ## 📁 Project Structure
 
 <details>
-<summary> </summary>
+<summary>Repository structure</summary>
 <br>
 
 ```
