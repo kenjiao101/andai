@@ -1,6 +1,6 @@
 <div align="center">
 
-# Talent Market Skill Drift Study 2023
+# Talent Market Skill Drift Study
 
 ### Quantifying how data talent demand shifted across 10 job roles in the US market using Temporal Frequency Analysis, PMI-weighted co-occurrence networks, and TF-IDF adapted role profiling on 785K+ job postings.
 
@@ -280,15 +280,7 @@ DATE_END           = '2023-12-31'
 
 ---
 
-## ⚠️ Notes / Limitations
-
-- **US-centric dataset.** While the dataset includes postings from `15+` countries, `26.3%` originate from the United States and the dataset curator (`lukebarousse`) primarily targets the US market. Insights are most reliable for the US data job context. Applying findings to other regional markets requires validation.
-
-- **Salary data is not representative.** `97.2%` of `salary_year_avg` values are missing, as most employers do not publicly disclose salary ranges. Any salary-related figures in the notebook are based on a non-representative `2.8%` sample and should not be generalized to market compensation.
-
-- **Mann-Kendall trend test not performed.** The `pymannkendall` library was not available in the execution environment. Its absence is handled with a graceful fallback that skips formal monotonic trend testing. Temporal trend analysis in Section 7 relies on visual inspection of the proportion charts; formal trend significance is handled separately in Section 8 via Chi-Square testing.
-
-- **TF-IDF signature skill interpretation.** Section 10 applies an adapted IDF formula with Laplace smoothing: `IDF = log(n_roles / (n_roles_containing_skill + 1))`. With only `10` valid roles and all `40` top skills appearing across all roles, the IDF values are uniformly negative (`log(10/11) ≈ -0.095`). As a result, `idxmax()` in the auto-generated synthesis (Section 11) identifies the skill with the lowest overall TF per role (not the most distinctively frequent one) as the "signature skill." The **heatmap in Section 10** is the primary, more informative output for role profiling and should be prioritized over the point-estimate summary.
+## ⚠️ Limitations
 
 - **Ruby betweenness centrality anomaly.** Ruby has the highest betweenness centrality (`0.5546`) in the co-occurrence network, which likely reflects hybrid job postings that combine data engineering requirements with backend software development. This positioning may not represent Ruby as a genuine bridge skill within a pure data analytics ecosystem. GitLab and Jupyter are more reliable bridge skill candidates with better interpretive grounding.
 
