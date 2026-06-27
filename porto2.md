@@ -109,10 +109,10 @@ df_raw = ds['train'].to_pandas()
 <br>
 
 ```
-talent-market-skill-drift-2023/
+talent-market-skill-drift/
 │
 ├── notebooks/
-│   └── talent_market_skill_drift_study_.ipynb   ← START HERE
+│   └── talent_market_skill_drift_study.ipynb   ← START HERE
 │       (13 sections, fully self-contained and reproducible end-to-end)
 │
 ├── outputs/
