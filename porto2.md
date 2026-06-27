@@ -223,15 +223,32 @@ DATE_END           = '2023-12-31'
 
 ## 🎥 Screenshots
 
-| Skill Opportunity Matrix | Skill Emergence vs Decline |
-|:---:|:---:|
-| <img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/1fb1ae55-5d14-40f7-95d3-89d24a7e155e" /> | <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/593a71e2-6935-4edf-b27f-e6c3928295cc" /> |
-| *Growth momentum (x-axis) vs. overall market demand (y-axis) across all statistically significant skills. Four quadrants: Core & Growing, Emerging, Established Decline, Niche & Fading.* | *Top 20 emerging and top 20 declining skills by H1 vs. H2 growth rate (%, p < 0.05). Only skills with total frequency >= 500 are included.* |
+### Skill Opportunity Matrix
 
-| Co-occurrence Network | Role-Skill Distinctiveness Heatmap |
-|:---:|:---:|
-| <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/3adbf5ca-9b5b-44c3-81e1-3def97fb7add" /> | <img width="400" height="700" alt="image" src="https://github.com/user-attachments/assets/98884aad-76ad-4518-ba0f-f14b7d2e0abb" /> |
-| *Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality. Color = Louvain community (3 clusters). Layout: Kamada-Kawai.* | *TF-IDF adapted distinctiveness across 40 skills and 10 roles. Darker cells indicate higher distinctiveness score for that role. SQL and Python appear lightest — they are universal, not differentiators.* |
+<p align="center">
+  <img width="700" height="550" alt="image"
+       src="https://github.com/user-attachments/assets/1fb1ae55-5d14-40f7-95d3-89d24a7e155e" />
+</p>
+
+Growth momentum (x-axis) vs. overall market demand (y-axis) across all statistically significant skills. Four quadrants: Core & Growing, Emerging, Established Decline, Niche & Fading.
+
+### Skill Emergence vs Decline
+
+<p align="center">
+  <img width="500" height="600" alt="image"
+       src="https://github.com/user-attachments/assets/593a71e2-6935-4edf-b27f-e6c3928295cc" />
+</p>
+
+Top 20 emerging and top 20 declining skills by H1 vs. H2 growth rate (%, p < 0.05). Only skills with total frequency >= 500 are included.
+
+### Co-occurrence Network
+
+<p align="center">
+  <img width="700" height="550" alt="image"
+       src="https://github.com/user-attachments/assets/3adbf5ca-9b5b-44c3-81e1-3def97fb7add" />
+</p>
+
+Top 75 skills, 1,125 edges, PMI threshold >= 0.3. Node size = degree centrality. Color = Louvain community (3 clusters). Layout: Kamada-Kawai.
 
 ---
 
@@ -267,12 +284,23 @@ DATE_END           = '2023-12-31'
 
 *See Notes section on Ruby's centrality interpretation.
 
-<br>
+### Skill Trend Lines
 
-| Skill Trend Lines | Role Distribution Over Time |
-|:---:|:---:|
-| <img width="1000" height="300" alt="image" src="https://github.com/user-attachments/assets/62d2332d-fb5e-4aee-9bef-62956ecdff35" /> | <img width="1190" height="390" alt="image" src="https://github.com/user-attachments/assets/5a801d7a-34ae-46a3-b2d6-76f7995b546f" /> |
-| *Monthly proportion (%) of the top 10 skills. Y-axis is normalized proportion, not raw count — controls for seasonal posting volume fluctuations.* | *Stacked area chart showing the share of each role in total postings per month. Stable proportions suggest relatively constant hiring mix throughout 2023.* |
+<p align="center">
+  <img width="700" height="315" alt="image"
+       src="https://github.com/user-attachments/assets/62d2332d-fb5e-4aee-9bef-62956ecdff35" />
+</p>
+
+Monthly proportion (%) of the top 10 skills. Y-axis is normalized proportion, not raw count — controls for seasonal posting volume fluctuations.
+
+### Role Distribution Over Time
+
+<p align="center">
+  <img width="700" height="330" alt="image"
+       src="https://github.com/user-attachments/assets/5a801d7a-34ae-46a3-b2d6-76f7995b546f" />
+</p>
+
+Stacked area chart showing the share of each role in total postings per month. Stable proportions suggest relatively constant hiring mix throughout 2023.
 
 ---
 
