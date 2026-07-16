@@ -93,7 +93,7 @@ Of the `10` provinces in the high-poverty tier, `7` fall into the low-internet-a
 ### Fisher's Exact Test: High-Poverty vs. High-Access Provinces
 
 <p align="center">
-  <img width="1090" height="390" alt="image" 
+  <img width="890" height="390" alt="image" 
       src="https://github.com/user-attachments/assets/9bd4fc5e-9cb4-4dc6-bff3-4c74600017e5" />
 </p>
 
