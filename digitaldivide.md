@@ -75,7 +75,7 @@ Provinces with higher poverty consistently cluster toward lower internet access,
 ### Linear Regression Fit
 
 <p align="center">
-  <img width="609" height="361" alt="image" 
+  <img width="605" height="361" alt="image" 
       src="https://github.com/user-attachments/assets/68f1724e-e157-4ed9-8a1b-2c93a81c6029" />
 </p>
 
@@ -93,7 +93,7 @@ Of the `10` provinces in the high-poverty tier, `7` fall into the low-internet-a
 ### Fisher's Exact Test: High-Poverty vs. High-Access Provinces
 
 <p align="center">
-  <img width="740" height="300" alt="image" 
+  <img width="735" height="300" alt="image" 
       src="https://github.com/user-attachments/assets/9bd4fc5e-9cb4-4dc6-bff3-4c74600017e5" />
 </p>
 
