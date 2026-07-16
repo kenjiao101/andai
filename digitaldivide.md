@@ -1,4 +1,4 @@
-# Poverty and Internet Access in Indonesia: A Statistical Case Study (2024)
+# Poverty and Internet Access in Indonesia: A Statistical Case Study
 
 ### Analyzing poverty and internet access across Indonesian provinces using correlation, regression, and chi-square testing to quantify Indonesia's digital divide.
 
@@ -17,7 +17,7 @@
 
 ## 📌 Overview
 
-This project is a statistical analysis examining the relationship between poverty and household internet access across Indonesian provinces. It combines exploratory data analysis with two independent testing approaches: a continuous approach using Pearson correlation and linear regression, and a categorical approach using chi-square and Fisher's exact tests, applied to 2024 data from BPS (Statistics Indonesia) covering `37` provinces. The workflow moves from data cleaning and merging, through univariate and bivariate exploration, into regression modeling with full assumption checks, then into categorical association testing with effect size and post-hoc comparisons. The output is a cross-validated finding: poverty rate and internet access are strongly associated, confirmed independently by both the continuous and the categorical method.
+This project is a statistical analysis examining the relationship between poverty and household internet access across Indonesian provinces. It combines exploratory data analysis with two independent testing approaches: a continuous approach using Pearson correlation and linear regression, and a categorical approach using chi-square and Fisher's exact tests, applied to 2024 data from BPS (Statistics Indonesia) covering `38` provinces. The workflow moves from data cleaning and merging, through univariate and bivariate exploration, into regression modeling with full assumption checks, then into categorical association testing with effect size and post-hoc comparisons. The output is a cross-validated finding: poverty rate and internet access are strongly associated, confirmed independently by both the continuous and the categorical method.
 
 ## ❓ Problem Statement
 
@@ -36,10 +36,8 @@ This project is a statistical analysis examining the relationship between povert
 | **Source** | BPS (Badan Pusat Statistik / Statistics Indonesia), 2 tables |
 | **Link** | [Internet Access Table](https://www.bps.go.id/id/statistics-table/2/Mzk4IzI=/persentase-rumah-tangga-yang-pernah-mengakses-internet-dalam-3-bulan-terakhir-menurut-provinsi-dan-klasifikasi-daerah.html), [Poverty Rate Table](https://www.bps.go.id/id/statistics-table/2/MTkyIzI=/persentase-penduduk-miskin--p0--menurut-provinsi-dan-daerah.html) |
 | **Format** | CSV |
-| **Size** | `37` rows (provinces) x `5` columns after cleaning and merge |
-| **License** | Not verified, check BPS terms of use before redistributing the raw CSVs |
+| **Size** | `38` rows (provinces) x `5` columns after cleaning and merge |
 | **Time Coverage** | `2024` (poverty figure uses March 2024 / Semester 1 for temporal consistency) |
-| **Accessed on** | `[Fill in actual data access date]` |
 
 ### Data Dictionary (Key Columns)
 
