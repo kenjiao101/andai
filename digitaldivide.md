@@ -84,7 +84,7 @@ The fitted line, `Internet Access = 108.16 - 1.96 x Poverty Rate`, explains `R²
 ### Poverty vs. Internet Access Crosstabulation
 
 <p align="center">
-  <img width="792" height="690" alt="image" 
+  <img width="792" height="660" alt="image" 
       src="https://github.com/user-attachments/assets/77abedd2-f69a-411d-8bd5-ad4b39d8b843" />
 </p>
 
@@ -93,7 +93,7 @@ Of the `10` provinces in the high-poverty tier, `7` fall into the low-internet-a
 ### Fisher's Exact Test: High-Poverty vs. High-Access Provinces
 
 <p align="center">
-  <img width="790" height="340" alt="image" 
+  <img width="740" height="300" alt="image" 
       src="https://github.com/user-attachments/assets/9bd4fc5e-9cb4-4dc6-bff3-4c74600017e5" />
 </p>
 
