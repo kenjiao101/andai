@@ -66,8 +66,8 @@ This project is a statistical analysis examining the relationship between povert
 ### Poverty Rate vs. Internet Access (Bivariate Relationship)
 
 <p align="center">
-  <img width="700" height="430" alt="image"
-       src="[URL gambar - scatter plot bivariate dari notebook section 3.3 Analisis Bivariate]" />
+  <img width="1091" height="689" alt="image" 
+      src="https://github.com/user-attachments/assets/f9cd1a17-9ca2-4266-87ef-abac4eb8b7cd" />
 </p>
 
 Provinces with higher poverty consistently cluster toward lower internet access, with a Pearson correlation of `r = -0.8215` across the `38` provinces analyzed.
@@ -75,8 +75,8 @@ Provinces with higher poverty consistently cluster toward lower internet access,
 ### Linear Regression Fit
 
 <p align="center">
-  <img width="700" height="430" alt="image"
-       src="[URL gambar - regression plot dari notebook section 5.6 Visualisasi Regresi]" />
+  <img width="989" height="590" alt="image" 
+      src="https://github.com/user-attachments/assets/68f1724e-e157-4ed9-8a1b-2c93a81c6029" />
 </p>
 
 The fitted line, `Internet Access = 108.16 - 1.96 x Poverty Rate`, explains `R² = 0.6748` of the variance and is statistically significant at `p < 0.001`.
@@ -84,8 +84,8 @@ The fitted line, `Internet Access = 108.16 - 1.96 x Poverty Rate`, explains `R²
 ### Poverty vs. Internet Access Crosstabulation
 
 <p align="center">
-  <img width="600" height="450" alt="image"
-       src="[URL gambar - heatmap crosstabulation dari notebook section 4.5 atau 6.4 Visualisasi Chi-Square]" />
+  <img width="1192" height="990" alt="image" 
+      src="https://github.com/user-attachments/assets/77abedd2-f69a-411d-8bd5-ad4b39d8b843" />
 </p>
 
 Of the `10` provinces in the high-poverty tier, `7` fall into the low-internet-access tier against an expected count of only `2.43`, the single largest contributor to the chi-square statistic at `42.50%`.
@@ -93,8 +93,8 @@ Of the `10` provinces in the high-poverty tier, `7` fall into the low-internet-a
 ### Fisher's Exact Test: High-Poverty vs. High-Access Provinces
 
 <p align="center">
-  <img width="800" height="400" alt="image"
-       src="[URL gambar - visualisasi tabel 2x2 dari notebook section 6.3.1 Fisher's Exact Test]" />
+  <img width="1390" height="590" alt="image" 
+      src="https://github.com/user-attachments/assets/9bd4fc5e-9cb4-4dc6-bff3-4c74600017e5" />
 </p>
 
 None of the provinces in the high-poverty tier reach the high-internet-access tier (`Odds Ratio = 0`), a pattern confirmed as statistically significant by Fisher's exact test at `p = 0.036`.
