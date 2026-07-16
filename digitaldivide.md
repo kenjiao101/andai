@@ -129,7 +129,7 @@ None of the provinces in the high-poverty tier reach the high-internet-access ti
 
 1. Navigate to this project folder:
 ```bash
-cd poverty-internet-access-2024
+cd digital-divide-indonesia
 ```
 
 2. Create a virtual environment (Optional):
@@ -143,13 +143,19 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Dataset note: the two BPS CSV files are not yet included in this folder. Download them from the links in the [Dataset](#-dataset) section and place them in a local `data/` subfolder. The notebook was originally built in Google Colab using `google.colab.files.upload()`; when running locally, replace that call with `pd.read_csv('data/<filename>.csv', skiprows=...)`.
+4. Download the two datasets from the links in the [Dataset](#-dataset) section, then place them in `data/raw/`.
 
-5. Run the notebook:
-```bash
-jupyter notebook notebooks/eda_poverty_internet_access_2024.ipynb
+5. **Important, reproducibility note**: the original notebook was developed in Google Colab and uses the file upload widget (`google.colab.files.upload()`) in section 1.2. To run it locally (Jupyter/VS Code), replace that cell with direct file reading from a local folder:
+```python
+df_internet_raw = pd.read_csv('data/raw/internet_access_2024.csv', skiprows=3, encoding='utf-8')
+df_kemiskinan_raw = pd.read_csv('data/raw/poverty_rate_2024.csv', skiprows=4, encoding='utf-8')
 ```
-Cells can be run sequentially from top to bottom once step 4 is done; there is no interactive input beyond the original Colab upload step.
+
+6. Run the notebook:
+```bash
+jupyter notebook notebooks/digital_divide_statistical_analysis.ipynb
+```
+Execute the cells sequentially from top to bottom.
 
 ## ⚠️ Limitations
 
