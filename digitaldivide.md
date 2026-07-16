@@ -66,7 +66,7 @@ This project is a statistical analysis examining the relationship between povert
 ### Poverty Rate vs. Internet Access (Bivariate Relationship)
 
 <p align="center">
-  <img width="641" height="391" alt="image" 
+  <img width="610" height="361" alt="image" 
       src="https://github.com/user-attachments/assets/f9cd1a17-9ca2-4266-87ef-abac4eb8b7cd" />
 </p>
 
@@ -75,7 +75,7 @@ Provinces with higher poverty consistently cluster toward lower internet access,
 ### Linear Regression Fit
 
 <p align="center">
-  <img width="639" height="391" alt="image" 
+  <img width="609" height="361" alt="image" 
       src="https://github.com/user-attachments/assets/68f1724e-e157-4ed9-8a1b-2c93a81c6029" />
 </p>
 
@@ -84,7 +84,7 @@ The fitted line, `Internet Access = 108.16 - 1.96 x Poverty Rate`, explains `R²
 ### Poverty vs. Internet Access Crosstabulation
 
 <p align="center">
-  <img width="792" height="660" alt="image" 
+  <img width="792" height="640" alt="image" 
       src="https://github.com/user-attachments/assets/77abedd2-f69a-411d-8bd5-ad4b39d8b843" />
 </p>
 
