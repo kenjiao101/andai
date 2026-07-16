@@ -1,4 +1,4 @@
-# Poverty and Internet Access in Indonesia: A Statistical Case Study
+# Statistical Analysis of Poverty and Internet Access Across Indonesian Provinces
 
 ### Analyzing poverty and internet access across Indonesian provinces using correlation, regression, and chi-square testing to quantify Indonesia's digital divide.
 
@@ -84,7 +84,7 @@ The fitted line, `Internet Access = 108.16 - 1.96 x Poverty Rate`, explains `R²
 ### Poverty vs. Internet Access Crosstabulation
 
 <p align="center">
-  <img width="792" height="640" alt="image" 
+  <img width="792" height="639" alt="image" 
       src="https://github.com/user-attachments/assets/77abedd2-f69a-411d-8bd5-ad4b39d8b843" />
 </p>
 
