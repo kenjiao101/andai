@@ -116,8 +116,6 @@ None of the provinces in the high-poverty tier reach the high-internet-access ti
 2. **Each 1 percentage point increase in poverty is associated with roughly a 2 percentage point drop in internet access.** The fitted model is `Internet Access = 108.16 - 1.96 x Poverty Rate`, significant overall (`F = 72.62`, `p < 0.001`) and at the coefficient level (`t = -8.52`, `p < 0.001`, 95% CI `[-2.43, -1.49]`), valid within the observed poverty range of `4.00%` to `32.97%`.
 3. **A categorical test independently confirms the relationship, with a very strong effect size.** Splitting both variables into Low / Medium / High tiers by quartile, chi-square testing shows a significant association (`chi-square = 20.18`, `df = 4`, `p < 0.001`), with Cramer's V at `0.5222`, classified as very strong for a `3x3` table.
 4. **Because most contingency cells were too sparse for chi-square, Fisher's exact test was used as a more reliable check.** With `77.8%` of cells below the expected-frequency-of-5 threshold, a collapsed `2x2` table (High poverty vs. Low-Medium, crossed with High access vs. Low-Medium) was tested with Fisher's exact test, confirming significance at `p = 0.036`.
-5. **Not one high-poverty province reaches high internet access.** The `2x2` table shows an odds ratio of `0`: zero provinces combine a high-poverty classification with high internet access, the most extreme form of the pattern the regression already pointed to.
-6. **The high-poverty, low-access combination is the single largest driver of the chi-square result.** It contributes `42.50%` of the total chi-square statistic, with `7` provinces observed against an expected `2.43`, a standardized residual of `2.93`.
 
 ## 🚀 Getting Started
 
