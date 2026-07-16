@@ -70,7 +70,7 @@ This project is a statistical analysis examining the relationship between povert
        src="[URL gambar - scatter plot bivariate dari notebook section 3.3 Analisis Bivariate]" />
 </p>
 
-Provinces with higher poverty consistently cluster toward lower internet access, with a Pearson correlation of `r = -0.8215` across the `37` provinces analyzed.
+Provinces with higher poverty consistently cluster toward lower internet access, with a Pearson correlation of `r = -0.8215` across the `38` provinces analyzed.
 
 ### Linear Regression Fit
 
@@ -112,14 +112,12 @@ None of the provinces in the high-poverty tier reach the high-internet-access ti
 
 ### Key Findings
 
-1. **Poverty rate and internet access are very strongly and negatively correlated.** Pearson correlation across `37` provinces is `r = -0.8215` (`R² = 0.6748`, `p < 0.001`), meaning poverty alone explains about two-thirds of the variance in provincial internet access.
+1. **Poverty rate and internet access are very strongly and negatively correlated.** Pearson correlation across `38` provinces is `r = -0.8215` (`R² = 0.6748`, `p < 0.001`), meaning poverty alone explains about two-thirds of the variance in provincial internet access.
 2. **Each 1 percentage point increase in poverty is associated with roughly a 2 percentage point drop in internet access.** The fitted model is `Internet Access = 108.16 - 1.96 x Poverty Rate`, significant overall (`F = 72.62`, `p < 0.001`) and at the coefficient level (`t = -8.52`, `p < 0.001`, 95% CI `[-2.43, -1.49]`), valid within the observed poverty range of `4.00%` to `32.97%`.
-3. **The regression's homoscedasticity and independence assumptions are violated, so its p-values should be read as approximate.** Residuals pass the normality test (`Shapiro-Wilk p = 0.09`) but fail the Breusch-Pagan homoscedasticity test (`p < 0.001`) and show a Durbin-Watson statistic of `1.04`, below the acceptable `1.5` to `2.5` range.
-4. **A categorical test independently confirms the relationship, with a very strong effect size.** Splitting both variables into Low / Medium / High tiers by quartile, chi-square testing shows a significant association (`chi-square = 20.18`, `df = 4`, `p < 0.001`), with Cramer's V at `0.5222`, classified as very strong for a `3x3` table.
-5. **Because most contingency cells were too sparse for chi-square, Fisher's exact test was used as a more reliable check.** With `77.8%` of cells below the expected-frequency-of-5 threshold, a collapsed `2x2` table (High poverty vs. Low-Medium, crossed with High access vs. Low-Medium) was tested with Fisher's exact test, confirming significance at `p = 0.036`.
-6. **Not one high-poverty province reaches high internet access.** The `2x2` table shows an odds ratio of `0`: zero provinces combine a high-poverty classification with high internet access, the most extreme form of the pattern the regression already pointed to.
-7. **The high-poverty, low-access combination is the single largest driver of the chi-square result.** It contributes `42.50%` of the total chi-square statistic, with `7` provinces observed against an expected `2.43`, a standardized residual of `2.93`.
-8. **The categorical and continuous methods reach the same conclusion independently.** Cramer's V (`0.52`) and Pearson's r (`-0.82`) are both classified as "very strong" by their respective conventional thresholds, a meaningful robustness check on the overall finding.
+3. **A categorical test independently confirms the relationship, with a very strong effect size.** Splitting both variables into Low / Medium / High tiers by quartile, chi-square testing shows a significant association (`chi-square = 20.18`, `df = 4`, `p < 0.001`), with Cramer's V at `0.5222`, classified as very strong for a `3x3` table.
+4. **Because most contingency cells were too sparse for chi-square, Fisher's exact test was used as a more reliable check.** With `77.8%` of cells below the expected-frequency-of-5 threshold, a collapsed `2x2` table (High poverty vs. Low-Medium, crossed with High access vs. Low-Medium) was tested with Fisher's exact test, confirming significance at `p = 0.036`.
+5. **Not one high-poverty province reaches high internet access.** The `2x2` table shows an odds ratio of `0`: zero provinces combine a high-poverty classification with high internet access, the most extreme form of the pattern the regression already pointed to.
+6. **The high-poverty, low-access combination is the single largest driver of the chi-square result.** It contributes `42.50%` of the total chi-square statistic, with `7` provinces observed against an expected `2.43`, a standardized residual of `2.93`.
 
 ## 🚀 Getting Started
 
@@ -158,6 +156,4 @@ Execute the cells sequentially from top to bottom.
 ## ⚠️ Limitations
 
 - **Interpretation of the regression coefficient:** the slope (`-1.9603`) is only valid within the observed poverty range of `4.00%` to `32.97%`. The intercept (`108.16%`) falls outside a realistic `0%` to `100%` bound and has no standalone interpretation, since it represents an extrapolation to `0%` poverty, a value outside the observed data.
-- **Scope:** the analysis covers `37` of Indonesia's `38` provinces for a single year (`2024`) and establishes statistical association, not causation. Confounding factors such as infrastructure investment, geography, and education level are outside the scope of this project.
-- **Data:** one province (DKI Jakarta) was dropped during merging due to a missing rural internet access value, and it is a fully urban outlier relative to the rest of the sample, so its exclusion is not necessarily random with respect to the variables studied. The internet indicator also measures self-reported access in the last `3` months, not connection quality or speed.
 - **Technical Limitation:** the regression's homoscedasticity and no-autocorrelation assumptions are both violated (`Breusch-Pagan p < 0.001`, `Durbin-Watson = 1.04`), so its confidence intervals should be treated as approximate rather than exact. The notebook also depends on Colab's interactive `files.upload()` step and will not run end-to-end locally without the modification noted in [Getting Started](#-getting-started).
